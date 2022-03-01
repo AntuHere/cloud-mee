@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import django_heroku
 import dj_database_url
 import os
-from msilib.schema import Media
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
