@@ -10,7 +10,8 @@ def index(request):
             try:
                 new_photo=Photo(img=request.FILES['img'])
                 new_photo.save()
-                return render(request,'index.html',{ 'new_url':str(new_photo.img.url)})
+                urlObject = request.get_host()
+                return render(request,'index.html',{ 'new_url':str(urlObject+ new_photo.img.url)})
             finally:
                 # time.sleep(7)
                 # a=f'{new_photo.img.url}'
